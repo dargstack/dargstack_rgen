@@ -2,6 +2,8 @@
 
 [DargStack](https://github.com/dargmuesli/dargstack)'s README.md generator.
 
+Run the script using `node generator.js` or [`dargstack rgen`](https://github.com/dargmuesli/dargstack).
+
 ## Help
 
 ```
