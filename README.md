@@ -1,3 +1,5 @@
+[![Docker CI](https://github.com/dargmuesli/dargstack_rgen/workflows/Docker%20CI/badge.svg)](https://github.com/dargmuesli/dargstack_rgen/actions?query=workflow%3A%22Docker+CI%22)
+
 # DargStack RGen
 
 [DargStack](https://github.com/dargmuesli/dargstack)'s README.md generator.
