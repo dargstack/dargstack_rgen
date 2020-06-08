@@ -2,6 +2,15 @@
 
 [DargStack](https://github.com/dargmuesli/dargstack)'s README.md generator.
 
+## Help
+
+```
+Options:
+  --version   Show version number                                      [boolean]
+  --path, -p  Path to a DargStack stack project                         [string]
+  --help, -h  Show help                                                [boolean]
+```
+
 ## Example
 
 YAML input:
