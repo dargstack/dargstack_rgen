@@ -1,0 +1,23 @@
+{
+  "name": "dargstack_rgen",
+  "version": "0.1.0",
+  "description": "Generates a DargStack stack project readme.",
+  "main": "generator.js",
+  "repository": "https://github.com/dargmuesli/dargstack_rgen.git",
+  "author": "Jonas Thelemann <e-mail@jonas-thelemann.de>",
+  "license": "GPL-3.0-only",
+  "dependencies": {
+    "deepmerge": "4.2.2",
+    "json2md": "1.7.0",
+    "yaml": "1.10.0",
+    "yargs": "15.3.1"
+  },
+  "devDependencies": {
+    "eslint": "7.2.0",
+    "eslint-config-standard": "14.1.1",
+    "eslint-plugin-import": "2.21.1",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1"
+  }
+}
