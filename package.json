@@ -10,7 +10,7 @@
     "deepmerge": "4.2.2",
     "json2md": "1.7.1",
     "yaml": "1.10.0",
-    "yargs": "15.4.1"
+    "yargs": "16.0.0"
   },
   "devDependencies": {
     "eslint": "7.8.1",
