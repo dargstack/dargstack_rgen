@@ -25,18 +25,21 @@ const projectPath = argv.path || process.cwd()
 const stackDevelopmentPath = path.join(projectPath, 'development', 'stack.yml')
 const stackProductionPath = path.join(projectPath, 'production', 'production.yml')
 
-if (!fs.existsSync(stackDevelopmentPath)) {
+let developmentYaml
+let productionYaml
+
+if (fs.existsSync(stackDevelopmentPath)) {
+  developmentYaml = yaml.parseDocument(fs.readFileSync(stackDevelopmentPath, 'utf8'))
+} else {
   console.error('Development stack file not found!')
   process.exit(1)
 }
 
-if (!fs.existsSync(stackProductionPath)) {
-  console.error('Production stack file not found!')
-  process.exit(1)
+if (fs.existsSync(stackProductionPath)) {
+  productionYaml = yaml.parseDocument(fs.readFileSync(stackProductionPath, 'utf8'))
+} else {
+  console.info('Production stack file not found!')
 }
-
-const developmentYaml = yaml.parseDocument(fs.readFileSync(stackDevelopmentPath, 'utf8'))
-const productionYaml = yaml.parseDocument(fs.readFileSync(stackProductionPath, 'utf8'))
 
 if (developmentYaml.commentBefore === null) {
   console.error('YAML is missing metadata!')
@@ -94,7 +97,7 @@ for (let i = 0; i < documentItems.length; i++) {
 
 documentItems = []
 
-if (productionYaml.contents !== null) {
+if (productionYaml !== undefined && productionYaml.contents !== null) {
   documentItems.push(productionYaml.contents.items)
 }
 
