@@ -1,9 +1,9 @@
 const fs = require('fs')
 const path = require('path')
 
+const deepMerge = require('deepmerge')
 const json2md = require('json2md')
-const merge = require('deepmerge')
-const YAML = require('yaml')
+const yaml = require('yaml')
 const yargs = require('yargs')
 
 json2md.converters.vanilla = function (input, json2md) {
@@ -35,8 +35,8 @@ if (!fs.existsSync(stackProductionPath)) {
   process.exit(1)
 }
 
-const developmentYaml = YAML.parseDocument(fs.readFileSync(stackDevelopmentPath, 'utf8'))
-const productionYaml = YAML.parseDocument(fs.readFileSync(stackProductionPath, 'utf8'))
+const developmentYaml = yaml.parseDocument(fs.readFileSync(stackDevelopmentPath, 'utf8'))
+const productionYaml = yaml.parseDocument(fs.readFileSync(stackProductionPath, 'utf8'))
 
 if (developmentYaml.commentBefore === null) {
   console.error('YAML is missing metadata!')
@@ -128,7 +128,7 @@ for (let i = 0; i < documentItems.length; i++) {
     toc.push(documentItem.key.value)
   }
 
-  content[documentItem.key.value] = merge(content[documentItem.key.value], contentElementItems)
+  content[documentItem.key.value] = deepMerge(content[documentItem.key.value], contentElementItems)
 }
 
 if (commentMissing) {
