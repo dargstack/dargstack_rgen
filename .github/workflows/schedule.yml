@@ -2,7 +2,7 @@ name: Scheduled Release
 
 on:
   schedule:
-    - cron:  '15 * * * *' # Every hour
+    - cron:  '33 * * * *' # Every hour
 
 jobs:
   scheduled-release:
@@ -10,6 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
+          fetch-depth: 0
           ref: ${{ github.head_ref }}
           token: ${{ secrets.GH_TOKEN }}
       - name: Get Previous tag
