@@ -1,3 +1,10 @@
+## [0.3.1](https://github.com/dargmuesli/dargstack_rgen/compare/0.3.0...0.3.1) (2020-09-22)
+
+
+### Bug Fixes
+
+* support undefined value ([be9a71c](https://github.com/dargmuesli/dargstack_rgen/commit/be9a71cd6dc86bd5d35b071a33f63da46fea8a4a))
+
 # [0.3.0](https://github.com/dargmuesli/dargstack_rgen/compare/0.2.1...0.3.0) (2020-09-22)
 
 
