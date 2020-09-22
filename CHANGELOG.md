@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/dargmuesli/dargstack_rgen/compare/0.2.1...0.3.0) (2020-09-22)
+
+
+### Features
+
+* make production yaml optional ([8f4176b](https://github.com/dargmuesli/dargstack_rgen/commit/8f4176b82a08b4140fe515ad3268043c8226aa5b))
+
 ## [0.2.1](https://github.com/dargmuesli/dargstack_rgen/compare/0.2.0...0.2.1) (2020-09-22)
 
 
