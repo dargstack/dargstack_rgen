@@ -92,7 +92,11 @@ for (let i = 0; i < documentItems.length; i++) {
   content[documentItem.key.value] = contentElementItems
 }
 
-documentItems = productionYaml.contents.items
+documentItems = []
+
+if (productionYaml.contents !== null) {
+  documentItems.push(productionYaml.contents.items)
+}
 
 for (let i = 0; i < documentItems.length; i++) {
   const documentItem = documentItems[i]
