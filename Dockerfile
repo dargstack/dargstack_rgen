@@ -8,4 +8,4 @@ RUN yarn install
 
 EXPOSE 8080
 
-ENTRYPOINT ["node", "generator.js"]
+ENTRYPOINT ["node", "./src/generator.js"]
