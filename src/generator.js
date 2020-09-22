@@ -103,12 +103,12 @@ if (productionYaml !== undefined && productionYaml.contents !== null) {
 
 for (let i = 0; i < documentItems.length; i++) {
   const documentItem = documentItems[i]
-  const elementItems = documentItem.value.items
 
-  if (documentItem.value.type !== 'MAP') {
+  if (documentItem.value === undefined || documentItem.value.type !== 'MAP') {
     continue
   }
 
+  const elementItems = documentItem.value.items
   const contentElementItems = {}
 
   for (let j = 0; j < elementItems.length; j++) {
