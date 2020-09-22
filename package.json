@@ -1,6 +1,6 @@
 {
   "name": "dargstack_rgen",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Generates a DargStack stack project readme.",
   "main": "generator.js",
   "repository": "https://github.com/dargmuesli/dargstack_rgen.git",
