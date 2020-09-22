@@ -1,0 +1,30 @@
+name: Scheduled Release
+
+on:
+  schedule:
+    - cron:  '0 * * * *' # Every hour
+
+jobs:
+  scheduled-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Get Previous tag
+        id: previoustag
+        uses: "WyriHaximus/github-action-get-previous-tag@master"
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Get next minor version
+        id: semvers
+        uses: "WyriHaximus/github-action-next-semvers@v1"
+        with:
+          version: ${{ steps.previoustag.outputs.tag }}
+      - name: manifest Version
+        uses: deef0000dragon1/json-edit-action/@v1
+        env:
+          KEY: versionTouch
+          VALUE: ${{ steps.semvers.outputs.patch }}
+          FILE: package.json
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'fix(release): schedule release'
