@@ -1,16 +1,16 @@
 {
-    "automerge": true,
-    "automergeType": "branch",
-    "docker": {
-      "major": {
-        "enabled": true
-      },
-      "pinDigests": true
-    },
-    "extends": [
-      "config:base"
-    ],
+  "automerge": true,
+  "automergeType": "branch",
+  "docker": {
     "major": {
-      "automerge": false
-    }
+      "enabled": true
+    },
+    "pinDigests": true
+  },
+  "extends": [
+    "config:base"
+  ],
+  "major": {
+    "automerge": false
   }
+}
