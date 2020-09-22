@@ -2,7 +2,7 @@ name: Scheduled Release
 
 on:
   schedule:
-    - cron:  '33 * * * *' # Every hour
+    - cron:  '0 0 * * 1' # Every Monday at 00:00 AM UTC on the default branch
 
 jobs:
   scheduled-release:
