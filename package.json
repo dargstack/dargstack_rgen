@@ -3,7 +3,7 @@
   "version": "0.3.2",
   "scheduleVersion": "0.3.2",
   "description": "Generates a DargStack stack project readme.",
-  "main": "generator.js",
+  "main": "src/generator.js",
   "repository": "https://github.com/dargmuesli/dargstack_rgen.git",
   "author": "Jonas Thelemann <e-mail@jonas-thelemann.de>",
   "license": "GPL-3.0-only",
