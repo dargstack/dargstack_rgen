@@ -22,8 +22,8 @@ const argv = yargs
 
 const projectPath = argv.path || process.cwd()
 
-const stackDevelopmentPath = path.join(projectPath, 'development', 'stack.yml')
-const stackProductionPath = path.join(projectPath, 'production', 'production.yml')
+const stackDevelopmentPath = path.join(projectPath, 'src', 'development', 'stack.yml')
+const stackProductionPath = path.join(projectPath, 'src', 'production', 'production.yml')
 
 // Read YAMLs.
 
