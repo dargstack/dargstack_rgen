@@ -1,3 +1,10 @@
+## [0.3.3](https://github.com/dargmuesli/dargstack_rgen/compare/0.3.2...0.3.3) (2020-09-28)
+
+
+### Bug Fixes
+
+* **yarn:** correct "main" path ([2a5df86](https://github.com/dargmuesli/dargstack_rgen/commit/2a5df86878caf2337ea9da11059849d0f0793464))
+
 ## [0.3.2](https://github.com/dargmuesli/dargstack_rgen/compare/0.3.1...0.3.2) (2020-09-28)
 
 
