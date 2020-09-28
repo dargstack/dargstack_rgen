@@ -25,6 +25,8 @@ const projectPath = argv.path || process.cwd()
 const stackDevelopmentPath = path.join(projectPath, 'development', 'stack.yml')
 const stackProductionPath = path.join(projectPath, 'production', 'production.yml')
 
+// Read YAMLs.
+
 let developmentYaml
 let productionYaml
 
@@ -63,6 +65,8 @@ const content = {}
 
 let commentMissing = false
 
+// Parse development YAML.
+
 let documentItems = developmentYaml.contents.items
 
 for (let i = 0; i < documentItems.length; i++) {
@@ -94,6 +98,8 @@ for (let i = 0; i < documentItems.length; i++) {
   toc.push(documentItem.key.value)
   content[documentItem.key.value] = contentElementItems
 }
+
+// Parse production YAML.
 
 documentItems = []
 
