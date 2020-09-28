@@ -104,7 +104,7 @@ for (let i = 0; i < documentItems.length; i++) {
 documentItems = []
 
 if (productionYaml !== undefined && productionYaml.contents !== null) {
-  documentItems.push(productionYaml.contents.items)
+  documentItems = productionYaml.contents.items
 }
 
 for (let i = 0; i < documentItems.length; i++) {
