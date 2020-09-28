@@ -1,3 +1,10 @@
+## [0.3.4](https://github.com/dargmuesli/dargstack_rgen/compare/0.3.3...0.3.4) (2020-09-28)
+
+
+### Bug Fixes
+
+* set array instead of pushing to it ([1a06cd1](https://github.com/dargmuesli/dargstack_rgen/commit/1a06cd1a5961d28fccca2d16171845447f306fa0))
+
 ## [0.3.3](https://github.com/dargmuesli/dargstack_rgen/compare/0.3.2...0.3.3) (2020-09-28)
 
 
