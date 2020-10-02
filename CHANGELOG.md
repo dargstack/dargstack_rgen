@@ -1,3 +1,10 @@
+# [0.4.0](https://github.com/dargmuesli/dargstack_rgen/compare/0.3.4...0.4.0) (2020-10-02)
+
+
+### Features
+
+* adapt source directory ([6b1fdd4](https://github.com/dargmuesli/dargstack_rgen/commit/6b1fdd42a9e292e76d9a7831e69417bf3bf88444))
+
 ## [0.3.4](https://github.com/dargmuesli/dargstack_rgen/compare/0.3.3...0.3.4) (2020-09-28)
 
 
