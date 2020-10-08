@@ -1,4 +1,4 @@
-FROM node:14.13.0-alpine@sha256:df7d661e1b89cd4c774e445c78862a4397340bab613fa57b97056d01cdc33e44 AS production
+FROM node:14.13.1-alpine@sha256:9a28dee760ed940c6b72bd0b5aca05cdb04a05f4328f6308c59b3d59903e5c30 AS production
 
 WORKDIR /srv/app/
 
