@@ -1190,10 +1190,10 @@ json-stable-stringify-without-jsonify@^1.0.1:
   resolved "https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
   integrity sha1-nbe1lJatPzz+8wp1FC0tkwrXJlE=
 
-json2md@1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/json2md/-/json2md-1.8.0.tgz#568ff5508b8002de62df5a79c26a84e9ad4bc5c0"
-  integrity sha512-sEwJGqqde09/yD9PMZ/+Wapdoihx6pnUKJ1ra+hU/csGoUt9Nh7w3VcD9CUouT1U77Ju9ft6q3/az/yBySs6DA==
+json2md@1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/json2md/-/json2md-1.9.0.tgz#40c5ab743ceab8aae0b6d2b4d8db1b957dcccb75"
+  integrity sha512-Jnq079Uw0Rhu+sQHkTDASVuu6tFolhYkVmULLaBPQj2a2lfgkc4lgZ6gu6CQa0xX028aJ3V7HjDRQFiuB0BymA==
   dependencies:
     indento "^1.1.7"
 
