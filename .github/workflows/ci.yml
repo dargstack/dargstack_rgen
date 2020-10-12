@@ -81,17 +81,17 @@ jobs:
           docker buildx build \
             --cache-from=$IMAGE_ID:cache \
             -t stage_build \
-            --target build \
+            --target development \
             --load \
             .
           docker container create --name extract stage_build
-          docker container cp extract:/srv/app/dist/ .
+          docker container cp extract:/srv/app/src/ .
           docker container rm -f extract
 
       - name: Zip
         uses: montudor/action-zip@v0.1.0
         with:
-          args: zip -qq -r ./dargstack_rgen.zip ./dist/
+          args: zip -qq -r ./dargstack_rgen.zip ./src/
 
       - name: GitHub Release Asset
         uses: softprops/action-gh-release@v1
