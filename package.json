@@ -7,6 +7,9 @@
   "repository": "https://github.com/dargmuesli/dargstack_rgen.git",
   "author": "Jonas Thelemann <e-mail@jonas-thelemann.de>",
   "license": "GPL-3.0-only",
+  "bin": {
+    "dargstack_rgen": "./src/generator.js"
+  },
   "dependencies": {
     "deepmerge": "4.2.2",
     "diff": "4.0.2",
@@ -25,7 +28,6 @@
     "eslint-plugin-standard": "4.0.1",
     "husky": "4.3.0"
   },
-  "private": true,
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"

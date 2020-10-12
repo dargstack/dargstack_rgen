@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require('fs')
 const path = require('path')
 
@@ -200,6 +202,9 @@ if (validate) {
   const difference = diff.diffLines(md + '\n', readme)
 
   if (difference.length > 1) {
+    console.error('The README is not up-2-date!\n' +
+      'Remember that newline diffs aren\'t visibly highlighted.')
+
     difference.forEach((part) => {
       let color = part.added ? 'green'
         : part.removed ? 'red' : 'grey'
@@ -215,7 +220,9 @@ if (validate) {
           color = '[0m'
       }
 
-      process.stderr.write('\x1b' + color + part.value + '\x1b[0m')
+      if (color !== '[0m') {
+        process.stderr.write('\x1b' + color + part.value + '\x1b[0m')
+      }
     })
 
     process.exit(difference.length)
