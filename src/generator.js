@@ -202,6 +202,9 @@ if (validate) {
   const difference = diff.diffLines(md + '\n', readme)
 
   if (difference.length > 1) {
+    console.error('The README is not up-2-date!\n' +
+      'Remember that newline diffs aren\'t visibly highlighted.')
+
     difference.forEach((part) => {
       let color = part.added ? 'green'
         : part.removed ? 'red' : 'grey'
