@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 
 const deepMerge = require('deepmerge')
+const diff = require('diff')
 const json2md = require('json2md')
 const yaml = require('yaml')
 const yargs = require('yargs')
@@ -16,11 +17,17 @@ const argv = yargs
     description: 'Path to a DargStack stack project',
     type: 'string'
   })
+  .option('validate', {
+    alias: 'v',
+    description: 'Flag that enabled validation only',
+    type: 'boolean'
+  })
   .help()
   .alias('help', 'h')
   .argv
 
 const projectPath = argv.path || process.cwd()
+const validate = argv.validate || false
 
 const stackDevelopmentPath = path.join(projectPath, 'src', 'development', 'stack.yml')
 const stackProductionPath = path.join(projectPath, 'src', 'production', 'production.yml')
@@ -177,4 +184,42 @@ const mdjson = [
   })
 ]
 
-console.log(json2md(mdjson))
+const md = json2md(mdjson)
+
+if (validate) {
+  const readmePath = path.join(projectPath, 'README.md')
+  let readme
+
+  if (fs.existsSync(readmePath)) {
+    readme = fs.readFileSync(readmePath, 'utf8')
+  } else {
+    console.error('README.md file not found!')
+    process.exit(1)
+  }
+
+  const difference = diff.diffLines(md + '\n', readme)
+
+  if (difference.length > 1) {
+    difference.forEach((part) => {
+      let color = part.added ? 'green'
+        : part.removed ? 'red' : 'grey'
+
+      switch (color) {
+        case 'green':
+          color = '[32m'
+          break
+        case 'red':
+          color = '[31m'
+          break
+        default:
+          color = '[0m'
+      }
+
+      process.stderr.write('\x1b' + color + part.value + '\x1b[0m')
+    })
+
+    process.exit(difference.length)
+  }
+} else {
+  console.log(md)
+}
