@@ -1,3 +1,10 @@
+## [0.5.1](https://github.com/dargmuesli/dargstack_rgen/compare/0.5.0...0.5.1) (2020-10-12)
+
+
+### Bug Fixes
+
+* **ci:** correct release configuration ([b97f3aa](https://github.com/dargmuesli/dargstack_rgen/commit/b97f3aa3b2709c94469598dfc47ec7ff34a0eb8a))
+
 # [0.5.0](https://github.com/dargmuesli/dargstack_rgen/compare/0.4.1...0.5.0) (2020-10-12)
 
 
