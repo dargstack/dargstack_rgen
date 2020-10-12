@@ -220,7 +220,9 @@ if (validate) {
           color = '[0m'
       }
 
-      process.stderr.write('\x1b' + color + part.value + '\x1b[0m')
+      if (color !== '[0m') {
+        process.stderr.write('\x1b' + color + part.value + '\x1b[0m')
+      }
     })
 
     process.exit(difference.length)
