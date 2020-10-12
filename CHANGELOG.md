@@ -1,3 +1,18 @@
+# [0.6.0](https://github.com/dargmuesli/dargstack_rgen/compare/0.5.1...0.6.0) (2020-10-12)
+
+
+### Bug Fixes
+
+* **ci:** add missing environment variable ([ddae5b6](https://github.com/dargmuesli/dargstack_rgen/commit/ddae5b68a7fb545a356240b1a5a0ceab83db180e))
+* **ci:** login to Docker Hub only for pushes ([9684be1](https://github.com/dargmuesli/dargstack_rgen/commit/9684be1d3a0115c71faa9467c6f9e6569dd27cd8))
+* hide unchanged diff ([127f70f](https://github.com/dargmuesli/dargstack_rgen/commit/127f70ffe51c10828d7d2adb8939073f707db3d7))
+
+
+### Features
+
+* add diff error description prefix ([a1a2960](https://github.com/dargmuesli/dargstack_rgen/commit/a1a2960ebbea97d1d733cde16b6193c6cf88e6c8))
+* **npm:** add binary ([d8fd2c0](https://github.com/dargmuesli/dargstack_rgen/commit/d8fd2c0494c9dd3ac3e0deee9c9103cd042af9aa))
+
 ## [0.5.1](https://github.com/dargmuesli/dargstack_rgen/compare/0.5.0...0.5.1) (2020-10-12)
 
 
