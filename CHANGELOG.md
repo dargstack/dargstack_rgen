@@ -1,3 +1,10 @@
+# [0.5.0](https://github.com/dargmuesli/dargstack_rgen/compare/0.4.1...0.5.0) (2020-10-12)
+
+
+### Features
+
+* add validation ([29158d4](https://github.com/dargmuesli/dargstack_rgen/commit/29158d4a8223444720286f9c8a5136f6a1e6c437))
+
 ## [0.4.1](https://github.com/dargmuesli/dargstack_rgen/compare/0.4.0...0.4.1) (2020-10-05)
 
 
