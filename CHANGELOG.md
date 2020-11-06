@@ -1,3 +1,10 @@
+## [0.6.2](https://github.com/dargmuesli/dargstack_rgen/compare/0.6.1...0.6.2) (2020-11-06)
+
+
+### Performance Improvements
+
+* **docker:** clean yarn cache ([3325739](https://github.com/dargmuesli/dargstack_rgen/commit/33257397d53ea3438fa155ba884aba49dca42a3b))
+
 ## [0.6.1](https://github.com/dargmuesli/dargstack_rgen/compare/0.6.0...0.6.1) (2020-10-26)
 
 
