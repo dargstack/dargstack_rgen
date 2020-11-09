@@ -206,7 +206,8 @@ if (validate) {
       'Remember that newline diffs aren\'t visibly highlighted.')
 
     difference.forEach((part) => {
-      let color = part.added ? 'green'
+      let color = part.added
+        ? 'green'
         : part.removed ? 'red' : 'grey'
 
       switch (color) {
