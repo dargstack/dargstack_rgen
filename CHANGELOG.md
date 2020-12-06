@@ -1,3 +1,10 @@
+## [0.6.5](https://github.com/dargmuesli/dargstack_rgen/compare/0.6.4...0.6.5) (2020-12-06)
+
+
+### Bug Fixes
+
+* **docker:** skip husky installation ([4361d43](https://github.com/dargmuesli/dargstack_rgen/commit/4361d4320db03439d96d23f238a81748ce467222))
+
 ## [0.6.4](https://github.com/dargmuesli/dargstack_rgen/compare/0.6.3...0.6.4) (2020-11-30)
 
 
