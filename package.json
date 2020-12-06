@@ -15,7 +15,7 @@
     "diff": "5.0.0",
     "json2md": "1.9.1",
     "yaml": "1.10.0",
-    "yargs": "16.1.1"
+    "yargs": "16.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
