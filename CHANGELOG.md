@@ -1,3 +1,10 @@
+## [0.6.13](https://github.com/dargmuesli/dargstack_rgen/compare/0.6.12...0.6.13) (2021-02-12)
+
+
+### Bug Fixes
+
+* **ci:** trigger on create ([aacdcdf](https://github.com/dargmuesli/dargstack_rgen/commit/aacdcdfae981632c73df868f457dcaf40a22619a))
+
 ## [0.6.12](https://github.com/dargmuesli/dargstack_rgen/compare/0.6.11...0.6.12) (2021-02-01)
 
 
