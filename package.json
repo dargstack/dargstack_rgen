@@ -18,8 +18,8 @@
     "yargs": "16.2.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "12.0.0",
-    "@commitlint/config-conventional": "12.0.0",
+    "@commitlint/cli": "12.0.1",
+    "@commitlint/config-conventional": "12.0.1",
     "eslint": "7.20.0",
     "eslint-config-standard": "16.0.2",
     "eslint-plugin-import": "2.22.1",
