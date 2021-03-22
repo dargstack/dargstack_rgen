@@ -1,6 +1,6 @@
 {
   "name": "dargstack_rgen",
-  "version": "0.6.15",
+  "version": "0.6.16",
   "scheduleVersion": "0.6.16",
   "description": "Generates a DargStack stack project readme.",
   "main": "src/generator.js",
