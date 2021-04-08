@@ -1,4 +1,4 @@
-FROM node:14.16.1-alpine@sha256:a20a9661c97ef41c4ddb25a6df3db869f2f28bda1d5d5fa7fd35168dbe686c9a AS development
+FROM node:14.16.1-alpine@sha256:bdec2d4aa13450a2e2654e562df1d8a3016b3c4ab390ccd3ed09d861cbdb0d83 AS development
 
 # https://github.com/typicode/husky/issues/821
 ENV HUSKY_SKIP_INSTALL=1
