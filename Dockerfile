@@ -1,4 +1,4 @@
-FROM node:16.4.2-alpine@sha256:55cd026b9a7e4b2cbd5d0c67bf0c9feb151798a760a4ede5eb3ef2de026cddec AS development
+FROM node:16.4.2-alpine@sha256:b7e2d75ecd585feed57be69cd3dee973e5c498241e64906899b3baa2169fb35a AS development
 
 WORKDIR /srv/app/
 
