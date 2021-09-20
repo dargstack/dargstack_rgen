@@ -1,3 +1,11 @@
+## [0.6.31](https://github.com/dargmuesli/dargstack_rgen/compare/0.6.30...0.6.31) (2021-09-20)
+
+
+### Bug Fixes
+
+* **ci:** disable husky for semantic release ([3e12e14](https://github.com/dargmuesli/dargstack_rgen/commit/3e12e142ecb935316593f355b02bab4a8a09bb56))
+* **docker:** disable husky ([b8aba74](https://github.com/dargmuesli/dargstack_rgen/commit/b8aba7457f21414a7d59c4b7e7bca49ac77da490))
+
 ## [0.6.30](https://github.com/dargmuesli/dargstack_rgen/compare/0.6.29...0.6.30) (2021-09-20)
 
 
