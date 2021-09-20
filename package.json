@@ -30,6 +30,6 @@
     "shx": "0.3.3"
   },
   "scripts": {
-    "prepare": "if [[ \"$HUSKY\" != \"0\" ]]; then husky install && shx rm -rf .git/hooks && shx ln -s ../.husky .git/hooks; fi"
+    "prepare": "if [ \"$HUSKY\" != \"0\" ]; then husky install && shx rm -rf .git/hooks && shx ln -s ../.husky .git/hooks; fi"
   }
 }
