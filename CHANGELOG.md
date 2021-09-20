@@ -1,3 +1,10 @@
+## [0.6.32](https://github.com/dargmuesli/dargstack_rgen/compare/0.6.31...0.6.32) (2021-09-20)
+
+
+### Bug Fixes
+
+* **sh:** correct braces ([77bdca2](https://github.com/dargmuesli/dargstack_rgen/commit/77bdca2fa41804f767e416cf15ca5a106ceddb49))
+
 ## [0.6.31](https://github.com/dargmuesli/dargstack_rgen/compare/0.6.30...0.6.31) (2021-09-20)
 
 
