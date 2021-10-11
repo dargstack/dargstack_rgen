@@ -1,4 +1,4 @@
-FROM node:16.10.0-alpine@sha256:3da1c08529fef7007d57d2133a0feb0fa8c60fdd4ad6691978f9dfcb0365b430 AS development
+FROM node:16.11.0-alpine@sha256:9ceec9adb312844a7ed579d4aaa8d95efd80748ba41ee50786eed9f71f904e29 AS development
 
 ENV HUSKY=0
 
