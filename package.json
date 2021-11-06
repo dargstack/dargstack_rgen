@@ -20,7 +20,7 @@
   "devDependencies": {
     "@commitlint/cli": "14.1.0",
     "@commitlint/config-conventional": "14.1.0",
-    "eslint": "8.1.0",
+    "eslint": "8.2.0",
     "eslint-config-standard": "16.0.3",
     "eslint-plugin-import": "2.25.2",
     "eslint-plugin-node": "11.1.0",
