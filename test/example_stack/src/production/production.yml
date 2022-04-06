@@ -1,0 +1,30 @@
+secrets:
+  traefik_cf-dns-api-token:
+  # The DNS provider's DNS API token.
+    external: true
+  traefik_cf-zone-api-token:
+  # The DNS provider's zone API token.
+    external: true
+services:
+  postgres_backup:
+  # Backup service for `postgres`.
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
+      POSTGRES_USER_FILE: /run/secrets/postgres_user
+    image: prodrigestivill/postgres-backup-local:14-alpine@sha256:78b41a63ee65fffddc1490e8dca49f9783b99e605aab8710cb57b7ce88d63c1a
+    secrets:
+    - postgres_password
+    - postgres_user
+    volumes:
+    - postgres_data:/var/lib/postgresql/data/
+  traefik_certs-dumper:
+  # See [DargStack template: certificates](https://github.com/dargmuesli/dargstack_template/#certificates).
+    image: ldez/traefik-certs-dumper:v2.8.1@sha256:2734462fc8290feab0e34a00d5f3e4992ba74f8e3712d74efff7ae703d0e7e87
+    volumes:
+    - acme_data:/etc/traefik/acme/
+version: "3.7"
+volumes:
+  acme_data:
+  # The reverse proxy's certificate data.
+    {}
