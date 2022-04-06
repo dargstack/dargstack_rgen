@@ -1,3 +1,10 @@
+## [0.6.49](https://github.com/dargmuesli/dargstack_rgen/compare/0.6.48...0.6.49) (2022-04-06)
+
+
+### Bug Fixes
+
+* use new node identifier ([229cc1c](https://github.com/dargmuesli/dargstack_rgen/commit/229cc1c972d15105c95e157db53d161ecdc75c13))
+
 ## [0.6.48](https://github.com/dargmuesli/dargstack_rgen/compare/0.6.47...0.6.48) (2022-03-28)
 
 
