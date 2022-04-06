@@ -82,7 +82,7 @@ for (let i = 0; i < documentItems.length; i++) {
   const documentItem = documentItems[i]
   const elementItems = documentItem.value.items
 
-  if (documentItem.value.type !== 'MAP') {
+  if (!yaml.isMap(documentItem.value)) {
     continue
   }
 
@@ -119,7 +119,7 @@ if (productionYaml !== undefined && productionYaml.contents !== null) {
 for (let i = 0; i < documentItems.length; i++) {
   const documentItem = documentItems[i]
 
-  if (documentItem.value === undefined || documentItem.value.type !== 'MAP') {
+  if (documentItem.value === undefined || !yaml.isMap(documentItem.value)) {
     continue
   }
 
