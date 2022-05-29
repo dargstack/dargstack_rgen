@@ -17,22 +17,31 @@ const argv = yargs
   .option('path', {
     alias: 'p',
     description: 'Path to a DargStack stack project',
-    type: 'string'
+    type: 'string',
   })
   .option('validate', {
     alias: 'v',
     description: 'Flag that enabled validation only',
-    type: 'boolean'
+    type: 'boolean',
   })
   .help()
-  .alias('help', 'h')
-  .argv
+  .alias('help', 'h').argv
 
 const projectPath = argv.path || process.cwd()
 const validate = argv.validate || false
 
-const stackDevelopmentPath = path.join(projectPath, 'src', 'development', 'stack.yml')
-const stackProductionPath = path.join(projectPath, 'src', 'production', 'production.yml')
+const stackDevelopmentPath = path.join(
+  projectPath,
+  'src',
+  'development',
+  'stack.yml'
+)
+const stackProductionPath = path.join(
+  projectPath,
+  'src',
+  'production',
+  'production.yml'
+)
 
 // Read YAMLs.
 
@@ -40,14 +49,18 @@ let developmentYaml
 let productionYaml
 
 if (fs.existsSync(stackDevelopmentPath)) {
-  developmentYaml = yaml.parseDocument(fs.readFileSync(stackDevelopmentPath, 'utf8'))
+  developmentYaml = yaml.parseDocument(
+    fs.readFileSync(stackDevelopmentPath, 'utf8')
+  )
 } else {
   console.error('Development stack file not found!')
   process.exit(1)
 }
 
 if (fs.existsSync(stackProductionPath)) {
-  productionYaml = yaml.parseDocument(fs.readFileSync(stackProductionPath, 'utf8'))
+  productionYaml = yaml.parseDocument(
+    fs.readFileSync(stackProductionPath, 'utf8')
+  )
 } else {
   console.info('Production stack file not found!')
 }
@@ -94,11 +107,16 @@ for (let i = 0; i < documentItems.length; i++) {
 
     if (elementItem.value.commentBefore === undefined) {
       if (!process.argv.includes('--no-comments')) {
-        console.error(`${documentItem.key.value}: ${elementItem.key.value} is missing a comment!`)
+        console.error(
+          `${documentItem.key.value}: ${elementItem.key.value} is missing a comment!`
+        )
         commentMissing = true
       }
     } else {
-      contentElementItem.comment = elementItem.value.commentBefore.split('\n').map(element => element.trim()).join('\n')
+      contentElementItem.comment = elementItem.value.commentBefore
+        .split('\n')
+        .map((element) => element.trim())
+        .join('\n')
     }
 
     contentElementItems[elementItem.key.value] = contentElementItem
@@ -128,15 +146,25 @@ for (let i = 0; i < documentItems.length; i++) {
 
   for (let j = 0; j < elementItems.length; j++) {
     const elementItem = elementItems[j]
-    const contentElementItem = { production: !(elementItem.key.value in content[documentItem.key.value]) }
+    const contentElementItem = {
+      production: !(elementItem.key.value in content[documentItem.key.value]),
+    }
 
     if (elementItem.value.commentBefore === undefined) {
-      if (!process.argv.includes('--no-comments') && !(elementItem.key.value in content[documentItem.key.value])) {
-        console.error(`${documentItem.key.value}: ${elementItem.key.value} is missing a comment!`)
+      if (
+        !process.argv.includes('--no-comments') &&
+        !(elementItem.key.value in content[documentItem.key.value])
+      ) {
+        console.error(
+          `${documentItem.key.value}: ${elementItem.key.value} is missing a comment!`
+        )
         commentMissing = true
       }
     } else {
-      contentElementItem.comment = elementItem.value.commentBefore.split('\n').map(element => element.trim()).join('\n')
+      contentElementItem.comment = elementItem.value.commentBefore
+        .split('\n')
+        .map((element) => element.trim())
+        .join('\n')
     }
 
     contentElementItems[elementItem.key.value] = contentElementItem
@@ -146,7 +174,10 @@ for (let i = 0; i < documentItems.length; i++) {
     toc.push(documentItem.key.value)
   }
 
-  content[documentItem.key.value] = deepMerge(content[documentItem.key.value], contentElementItems)
+  content[documentItem.key.value] = deepMerge(
+    content[documentItem.key.value],
+    contentElementItems
+  )
 }
 
 if (commentMissing) {
@@ -158,32 +189,48 @@ const mdjson = [
   {
     p: [
       `The Docker stack configuration for [${webName}](${webUrl}).`,
-      `This project is deployed in accordance to the [DargStack template](https://github.com/dargmuesli/dargstack_template/) to make deployment a breeze. It is closely related to [${sourceName}'s source code](${sourceUrl}).`
-    ]
+      `This project is deployed in accordance to the [DargStack template](https://github.com/dargmuesli/dargstack_template/) to make deployment a breeze. It is closely related to [${sourceName}'s source code](${sourceUrl}).`,
+    ],
   },
   { h2: 'Table of Contents' },
   {
-    ol: toc.map(element => { return { link: { title: element, source: '#' + element } } })
+    ol: toc.map((element) => {
+      return { link: { title: element, source: '#' + element } }
+    }),
   },
-  Object.entries(content).map(contentElement => {
+  Object.entries(content).map((contentElement) => {
     return [
       { h2: contentElement[0] },
       {
         ul: [
-          ...Object.entries(contentElement[1]).sort().map(itemElement => {
-            const itemElementMarkdown = [{
-              h3: `\`${itemElement[0]}\`${'production' in itemElement[1] && itemElement[1].production ? ' ![production](https://img.shields.io/badge/-production-informational.svg?style=flat-square)' : ''}`
-            }]
+          ...Object.entries(contentElement[1])
+            .sort()
+            .map((itemElement) => {
+              const itemElementMarkdown = [
+                {
+                  h3: `\`${itemElement[0]}\`${
+                    'production' in itemElement[1] && itemElement[1].production
+                      ? ' ![production](https://img.shields.io/badge/-production-informational.svg?style=flat-square)'
+                      : ''
+                  }`,
+                },
+              ]
 
-            if ('comment' in itemElement[1] && itemElement[1].comment) {
-              itemElementMarkdown.push({ vanilla: itemElement[1].comment.split('\n').map(comment => comment.trim()).join('\n') })
-            }
+              if ('comment' in itemElement[1] && itemElement[1].comment) {
+                itemElementMarkdown.push({
+                  vanilla: itemElement[1].comment
+                    .split('\n')
+                    .map((comment) => comment.trim())
+                    .join('\n'),
+                })
+              }
 
-            return itemElementMarkdown
-          })
-        ]
-      }]
-  })
+              return itemElementMarkdown
+            }),
+        ],
+      },
+    ]
+  }),
 ]
 
 const md = json2md(mdjson)
@@ -202,13 +249,13 @@ if (validate) {
   const difference = diff.diffLines(md + '\n', readme)
 
   if (difference.length > 1) {
-    console.error('The README is not up-2-date!\n' +
-      'Remember that newline diffs aren\'t visibly highlighted.')
+    console.error(
+      'The README is not up-2-date!\n' +
+        "Remember that newline diffs aren't visibly highlighted."
+    )
 
     difference.forEach((part) => {
-      let color = part.added
-        ? 'green'
-        : part.removed ? 'red' : 'grey'
+      let color = part.added ? 'green' : part.removed ? 'red' : 'grey'
 
       switch (color) {
         case 'green':
