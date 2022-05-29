@@ -1,3 +1,10 @@
+# [0.7.0](https://github.com/dargmuesli/dargstack_rgen/compare/0.6.55...0.7.0) (2022-05-29)
+
+
+### Features
+
+* support development only properties ([79f093d](https://github.com/dargmuesli/dargstack_rgen/commit/79f093d160424affa2bea3c360397004a5cbd4eb))
+
 ## [0.6.55](https://github.com/dargmuesli/dargstack_rgen/compare/0.6.54...0.6.55) (2022-05-23)
 
 
