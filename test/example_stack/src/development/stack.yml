@@ -47,9 +47,9 @@ services:
     - postgres_data:/var/lib/postgresql/data/
 version: "3.6"
 volumes:
-  portainer_data:
+  portainer_data: #DARGSTACK-REMOVE
   # The container manager's data.
-    {}
+    {} #DARGSTACK-REMOVE
   postgres_data:
   # The database's data.
     {}

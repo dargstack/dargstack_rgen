@@ -87,7 +87,7 @@ This project is deployed in accordance to the [DargStack template](https://githu
     
     The reverse proxy's certificate data.
     
- - ### `portainer_data`
+ - ### `portainer_data` ![development](https://img.shields.io/badge/-development-informational.svg?style=flat-square)
     
     The container manager's data.
     

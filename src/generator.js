@@ -9,6 +9,8 @@ const json2md = require('json2md')
 const yaml = require('yaml')
 const yargs = require('yargs')
 
+const DEVELOPMENT_ONLY_REGEX = /^\s*DARGSTACK-REMOVE\s*$/
+
 json2md.converters.vanilla = function (input, json2md) {
   return input
 }
@@ -212,6 +214,15 @@ const mdjson = [
                     'production' in itemElement[1] && itemElement[1].production
                       ? ' ![production](https://img.shields.io/badge/-production-informational.svg?style=flat-square)'
                       : ''
+                  }${
+                    'comment' in itemElement[1] &&
+                    itemElement[1].comment &&
+                    itemElement[1].comment
+                      .split('\n')
+                      .filter((element) => DEVELOPMENT_ONLY_REGEX.test(element))
+                      .length > 0
+                      ? ' ![development](https://img.shields.io/badge/-development-informational.svg?style=flat-square)'
+                      : ''
                   }`,
                 },
               ]
@@ -220,6 +231,7 @@ const mdjson = [
                 itemElementMarkdown.push({
                   vanilla: itemElement[1].comment
                     .split('\n')
+                    .filter((element) => !DEVELOPMENT_ONLY_REGEX.test(element))
                     .map((comment) => comment.trim())
                     .join('\n'),
                 })
