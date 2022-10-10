@@ -1,3 +1,10 @@
+## [0.7.11](https://github.com/dargmuesli/dargstack_rgen/compare/0.7.10...0.7.11) (2022-10-10)
+
+
+### Bug Fixes
+
+* **release:** schedule release ([9494480](https://github.com/dargmuesli/dargstack_rgen/commit/9494480f6a7b13d4497682e4616f8bbe06434643))
+
 ## [0.7.10](https://github.com/dargmuesli/dargstack_rgen/compare/0.7.9...0.7.10) (2022-09-26)
 
 
