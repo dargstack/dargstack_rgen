@@ -1,3 +1,16 @@
+# [0.8.0](https://github.com/dargmuesli/dargstack_rgen/compare/0.7.16...0.8.0) (2022-12-27)
+
+
+### Bug Fixes
+
+* **release:** schedule release ([1697ccd](https://github.com/dargmuesli/dargstack_rgen/commit/1697ccdc042cbc1be093e577d10e099baedb08da))
+
+
+### Features
+
+* **docker:** move ci from action to dockerfile ([188590f](https://github.com/dargmuesli/dargstack_rgen/commit/188590f3b69e0ead3fc63de64705fae6ac116240))
+* **package:** migrate to pnpm ([bf0a601](https://github.com/dargmuesli/dargstack_rgen/commit/bf0a6019a066843185062b8c941fc96f0f42cdc6))
+
 ## [0.7.16](https://github.com/dargmuesli/dargstack_rgen/compare/0.7.15...0.7.16) (2022-12-12)
 
 
