@@ -7,7 +7,7 @@ VOLUME /srv/app
 ENTRYPOINT ["node", "./src/generator.cjs"]
 
 
-FROM node:19.3.0-alpine@sha256:3ed634e0f15d3e05a1918c3949963508f7ed56350cf94156e6d804ae577849fa AS fetch
+FROM node:19.3.0-alpine@sha256:3ed634e0f15d3e05a1918c3949963508f7ed56350cf94156e6d804ae577849fa AS build
 
 WORKDIR /srv/app/
 
@@ -25,7 +25,7 @@ FROM node:19.3.0-alpine@sha256:3ed634e0f15d3e05a1918c3949963508f7ed56350cf94156e
 
 WORKDIR /srv/app/
 
-COPY --from=fetch /srv/app/ ./
+COPY --from=build /srv/app/ ./
 
 RUN npm install -g pnpm && \
     pnpm run test
@@ -35,7 +35,7 @@ FROM node:19.3.0-alpine@sha256:3ed634e0f15d3e05a1918c3949963508f7ed56350cf94156e
 
 WORKDIR /srv/app/
 
-COPY --from=fetch /srv/app/ /srv/app/
+COPY --from=build /srv/app/ /srv/app/
 COPY --from=test /srv/app/package.json /tmp/package.json
 
 
