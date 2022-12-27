@@ -13,4 +13,4 @@ COPY ./ ./
 
 EXPOSE 8080
 
-ENTRYPOINT ["node", "./src/generator.js"]
+ENTRYPOINT ["node", "./src/generator.cjs"]

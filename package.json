@@ -3,12 +3,21 @@
   "version": "0.7.16",
   "scheduleVersion": "0.7.17",
   "description": "Generates a DargStack stack project readme.",
-  "main": "src/generator.js",
+  "main": "src/generator.cjs",
   "repository": "https://github.com/dargmuesli/dargstack_rgen.git",
   "author": "Jonas Thelemann <e-mail@jonas-thelemann.de>",
   "license": "GPL-3.0-only",
   "bin": {
-    "dargstack_rgen": "./src/generator.js"
+    "dargstack_rgen": "./src/generator.cjs"
+  },
+  "type": "module",
+  "engines": {
+    "node": "19"
+  },
+  "packageManager": "pnpm@7.18.2",
+  "scripts": {
+    "postinstall": "if [ -d '.git' ] && [ -d '.husky' ]; then husky install && shx rm -rf .git/hooks && shx ln -s ../.husky .git/hooks; fi",
+    "test": "node src/generator.cjs -p test/example_stack -v"
   },
   "dependencies": {
     "deepmerge": "4.2.2",
@@ -23,14 +32,10 @@
     "eslint": "8.30.0",
     "eslint-config-standard": "17.0.0",
     "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-n": "15.6.0",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "6.1.1",
-    "eslint-plugin-standard": "4.1.0",
     "husky": "8.0.2",
     "shx": "0.3.4"
-  },
-  "scripts": {
-    "prepare": "if [[ -d '.git' && -d '.husky' ]]; then husky install && shx rm -rf .git/hooks && shx ln -s ../.husky .git/hooks; fi",
-    "test": "node src/generator.js -p test/example_stack -v"
   }
 }
