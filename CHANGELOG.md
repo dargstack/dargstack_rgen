@@ -1,3 +1,10 @@
+## [0.8.2](https://github.com/dargmuesli/dargstack_rgen/compare/0.8.1...0.8.2) (2022-12-27)
+
+
+### Bug Fixes
+
+* **docker:** only include production dependencies ([5a1fc63](https://github.com/dargmuesli/dargstack_rgen/commit/5a1fc634677123978b429f7fafd03576ff732b93))
+
 ## [0.8.1](https://github.com/dargmuesli/dargstack_rgen/compare/0.8.0...0.8.1) (2022-12-27)
 
 
