@@ -1,3 +1,10 @@
+## [0.8.1](https://github.com/dargmuesli/dargstack_rgen/compare/0.8.0...0.8.1) (2022-12-27)
+
+
+### Bug Fixes
+
+* **docker:** correct build stage name ([ea0def1](https://github.com/dargmuesli/dargstack_rgen/commit/ea0def13de476b2c616863793446a1644eac349c))
+
 # [0.8.0](https://github.com/dargmuesli/dargstack_rgen/compare/0.7.16...0.8.0) (2022-12-27)
 
 
