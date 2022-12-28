@@ -14,7 +14,7 @@
   "engines": {
     "node": "19"
   },
-  "packageManager": "pnpm@7.20.0",
+  "packageManager": "pnpm@7.21.0",
   "scripts": {
     "postinstall": "if [ ! \"$CI\" ]; then husky install && shx rm -rf .git/hooks && shx ln -s ../.husky .git/hooks; fi",
     "test": "node src/generator.cjs -p test/example_stack -v"
