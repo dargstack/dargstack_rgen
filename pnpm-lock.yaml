@@ -14,14 +14,14 @@ specifiers:
   husky: 8.0.2
   json2md: 2.0.0
   shx: 0.3.4
-  yaml: 2.2.0
+  yaml: 2.2.1
   yargs: 17.6.2
 
 dependencies:
   deepmerge: 4.2.2
   diff: 5.1.0
   json2md: 2.0.0
-  yaml: 2.2.0
+  yaml: 2.2.1
   yargs: 17.6.2
 
 devDependencies:
@@ -2350,8 +2350,8 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /yaml/2.2.0:
-    resolution: {integrity: sha512-auf7Gi6QwO7HW//GA9seGvTXVGWl1CM/ADWh1+RxtXr6XOxnT65ovDl9fTi4e0monEyJxCHqDpF6QnFDXmJE4g==}
+  /yaml/2.2.1:
+    resolution: {integrity: sha512-e0WHiYql7+9wr4cWMx3TVQrNwejKaEe7/rHNmQmqRjazfOP5W8PB6Jpebb5o6fIapbz9o9+2ipcaTM2ZwDI6lw==}
     engines: {node: '>= 14'}
     dev: false
 
