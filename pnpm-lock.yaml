@@ -11,7 +11,6 @@ specifiers:
   eslint-plugin-prettier: 4.2.1
   husky: 8.0.2
   json2md: 2.0.0
-  pinst: 3.0.0
   prettier: 2.8.1
   shx: 0.3.4
   yaml: 2.2.1
@@ -32,7 +31,6 @@ devDependencies:
   eslint-plugin-node: 11.1.0_eslint@8.31.0
   eslint-plugin-prettier: 4.2.1_xtjuwoibeoaqavcvkna3ocxxbu
   husky: 8.0.2
-  pinst: 3.0.0
   prettier: 2.8.1
   shx: 0.3.4
 
@@ -1457,12 +1455,6 @@ packages:
   /path-type/4.0.0:
     resolution: {integrity: sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==}
     engines: {node: '>=8'}
-    dev: true
-
-  /pinst/3.0.0:
-    resolution: {integrity: sha512-cengSmBxtCyaJqtRSvJorIIZXMXg+lJ3sIljGmtBGUVonMnMsVJbnzl6jGN1HkOWwxNuJynCJ2hXxxqCQrFDdw==}
-    engines: {node: '>=12.0.0'}
-    hasBin: true
     dev: true
 
   /prelude-ls/1.2.1:
