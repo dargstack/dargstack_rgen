@@ -17,7 +17,7 @@
   "packageManager": "pnpm@7.21.0",
   "scripts": {
     "lint": "eslint --ext .js,.cjs .",
-    "prepare": "husky install && shx rm -rf .git/hooks && shx ln -s ../.husky .git/hooks",
+    "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then husky install && shx rm -rf .git/hooks && shx ln -s ../.husky .git/hooks; fi",
     "test": "node src/generator.cjs -p test/example_stack -v"
   },
   "dependencies": {
