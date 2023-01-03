@@ -27,7 +27,6 @@ WORKDIR /srv/app/
 
 COPY --from=prepare /srv/app/ ./
 
-ENV CI=1
 ENV NODE_ENV=production
 
 RUN npm install -g pnpm && \
