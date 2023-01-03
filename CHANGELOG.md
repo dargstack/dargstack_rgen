@@ -1,3 +1,12 @@
+## [0.8.3](https://github.com/dargmuesli/dargstack_rgen/compare/0.8.2...0.8.3) (2023-01-03)
+
+
+### Bug Fixes
+
+* **deps:** add pinst ([c60ee22](https://github.com/dargmuesli/dargstack_rgen/commit/c60ee227c163a0cb617e8cf3f0d64c99e0518b6a))
+* **package:** install husky only out of production ([c6bba57](https://github.com/dargmuesli/dargstack_rgen/commit/c6bba579d49bd2a44c70898005064f72ca241f1a))
+* **package:** use prepare ([98a3490](https://github.com/dargmuesli/dargstack_rgen/commit/98a349018008ccb2ded576407af72c1b7f8ffc85))
+
 ## [0.8.2](https://github.com/dargmuesli/dargstack_rgen/compare/0.8.1...0.8.2) (2022-12-27)
 
 
