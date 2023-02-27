@@ -1,7 +1,7 @@
 {
   "name": "dargstack_rgen",
   "version": "0.8.6",
-  "scheduleVersion": "0.8.6",
+  "scheduleVersion": "0.8.7",
   "description": "Generates a DargStack stack project readme.",
   "main": "src/generator.cjs",
   "repository": "https://github.com/dargmuesli/dargstack_rgen.git",
