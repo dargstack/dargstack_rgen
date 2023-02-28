@@ -20,7 +20,3 @@ jobs:
     secrets:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-  release-assets:
-    needs: release-semantic
-    name: Release (assets)
-    uses: dargmuesli/github-actions/.github/workflows/release-assets.yml@0.28.8
