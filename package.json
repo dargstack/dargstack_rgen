@@ -14,7 +14,7 @@
   "engines": {
     "node": "19"
   },
-  "packageManager": "pnpm@7.29.1",
+  "packageManager": "pnpm@7.29.3",
   "scripts": {
     "lint": "eslint --ext .js,.cjs .",
     "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then husky install && shx rm -rf .git/hooks && shx ln -s ../.husky .git/hooks; fi",
