@@ -21,7 +21,7 @@
     "test": "node src/generator.cjs -p test/example_stack -v"
   },
   "dependencies": {
-    "deepmerge": "4.3.0",
+    "deepmerge": "4.3.1",
     "diff": "5.1.0",
     "json2md": "2.0.0",
     "yaml": "2.2.1",
