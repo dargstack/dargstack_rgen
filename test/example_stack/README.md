@@ -77,7 +77,7 @@ This project is deployed in accordance to the [DargStack template](https://githu
     
  - ### `traefik_certs-dumper` ![production](https://img.shields.io/badge/-production-informational.svg?style=flat-square)
     
-    Makes `traefik`'s certificates available as files.
+    You cannot access the reverse proxy's certificate helper directly.
     
 
 ## volumes
