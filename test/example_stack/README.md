@@ -77,7 +77,7 @@ This project is deployed in accordance to the [DargStack template](https://githu
     
  - ### `traefik_certs-dumper` ![production](https://img.shields.io/badge/-production-informational.svg?style=flat-square)
     
-    See [DargStack template: certificates](https://github.com/dargstack/dargstack_template/#certificates).
+    Makes `traefik`'s certificates available as files.
     
 
 ## volumes
