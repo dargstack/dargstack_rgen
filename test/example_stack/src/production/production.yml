@@ -19,7 +19,7 @@ services:
     volumes:
     - postgres_data:/var/lib/postgresql/data/
   traefik_certs-dumper:
-  # See [DargStack template: certificates](https://github.com/dargmuesli/dargstack_template/#certificates).
+  # See [DargStack template: certificates](https://github.com/dargstack/dargstack_template/#certificates).
     image: ldez/traefik-certs-dumper:v2.8.1@sha256:2734462fc8290feab0e34a00d5f3e4992ba74f8e3712d74efff7ae703d0e7e87
     volumes:
     - acme_data:/etc/traefik/acme/
