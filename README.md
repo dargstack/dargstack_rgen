@@ -1,10 +1,10 @@
-[![CI](https://github.com/dargmuesli/dargstack_rgen/actions/workflows/ci.yml/badge.svg)](https://github.com/dargmuesli/dargstack_rgen/actions/workflows/ci.yml)
+[![CI](https://github.com/dargstack/dargstack_rgen/actions/workflows/ci.yml/badge.svg)](https://github.com/dargstack/dargstack_rgen/actions/workflows/ci.yml)
 
 # DargStack RGen
 
-[DargStack](https://github.com/dargmuesli/dargstack)'s README.md generator.
+[DargStack](https://github.com/dargstack/dargstack)'s README.md generator.
 
-Run the script using `node ./src/generator.js` or [`dargstack rgen`](https://github.com/dargmuesli/dargstack).
+Run the script using `node ./src/generator.js` or [`dargstack rgen`](https://github.com/dargstack/dargstack).
 
 ## Help
 
@@ -67,7 +67,7 @@ Markdown output:
 
 The Docker stack configuration for [example.com](https://example.com/).
 
-This project is deployed in accordance to the [DargStack template](https://github.com/dargmuesli/dargstack_template/) to make deployment a breeze. It is closely related to [example's source code](https://github.com/example/example/).
+This project is deployed in accordance to the [DargStack template](https://github.com/dargstack/dargstack_template/) to make deployment a breeze. It is closely related to [example's source code](https://github.com/example/example/).
 
 ## Table of Contents
 
@@ -129,7 +129,7 @@ Markdown rendered:
 > # example_stack
 > The Docker stack configuration for [example.com](https://example.com/).
 >
->This project is deployed in accordance to the [DargStack template](https://github.com/dargmuesli/dargstack_template/) to make deployment a breeze. It is closely related to [example's source code](https://github.com/example/example/).
+>This project is deployed in accordance to the [DargStack template](https://github.com/dargstack/dargstack_template/) to make deployment a breeze. It is closely related to [example's source code](https://github.com/example/example/).
 >
 >## Table of Contents
 >

@@ -191,7 +191,7 @@ const mdjson = [
   {
     p: [
       `The Docker stack configuration for [${webName}](${webUrl}).`,
-      `This project is deployed in accordance to the [DargStack template](https://github.com/dargmuesli/dargstack_template/) to make deployment a breeze. It is closely related to [${sourceName}'s source code](${sourceUrl}).`,
+      `This project is deployed in accordance to the [DargStack template](https://github.com/dargstack/dargstack_template/) to make deployment a breeze. It is closely related to [${sourceName}'s source code](${sourceUrl}).`,
     ],
   },
   { h2: 'Table of Contents' },

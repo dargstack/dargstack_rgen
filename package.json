@@ -4,7 +4,7 @@
   "scheduleVersion": "0.8.9",
   "description": "Generates a DargStack stack project readme.",
   "main": "src/generator.cjs",
-  "repository": "https://github.com/dargmuesli/dargstack_rgen.git",
+  "repository": "https://github.com/dargstack/dargstack_rgen.git",
   "author": "Jonas Thelemann <e-mail@jonas-thelemann.de>",
   "license": "GPL-3.0-only",
   "bin": {
