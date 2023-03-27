@@ -35,7 +35,7 @@ secrets:
     file: ./path/to/password.secret
 services:
   adminer:
-  # You can access the service's frontend at [service.example.test](https://service.example.test/).
+  # You can access the service's frontend at [service.localhost](https://service.localhost/).
   # This information is required for login:
   #
   # |          |                     |
@@ -102,7 +102,7 @@ This project is deployed in accordance to the [DargStack template](https://githu
 
  - ### `adminer`
 
-    You can access the service's frontend at [service.example.test](https://service.example.test/).
+    You can access the service's frontend at [service.localhost](https://service.localhost/).
     This information is required for login:
 
     |          |                     |
@@ -164,7 +164,7 @@ Markdown rendered:
 >
 >- ### `adminer`
 >
->    You can access the service's frontend at [service.example.test]>(https://service.example.test/).
+>    You can access the service's frontend at [service.localhost]>(https://service.localhost/).
 >    This information is required for login:
 >
 >    |          |                     |

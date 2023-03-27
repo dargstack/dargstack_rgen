@@ -54,7 +54,7 @@ This project is deployed in accordance to the [DargStack template](https://githu
 
  - ### `adminer`
     
-    You can access the database's frontend at [adminer.example.test](https://adminer.example.test/).
+    You can access the database's frontend at [adminer.localhost](https://adminer.localhost/).
     This information is required for login:
     
     |          |                     |
@@ -77,7 +77,7 @@ This project is deployed in accordance to the [DargStack template](https://githu
     
  - ### `traefik_certs-dumper` ![production](https://img.shields.io/badge/-production-informational.svg?style=flat-square)
     
-    See [DargStack template: certificates](https://github.com/dargmuesli/dargstack_template/#certificates).
+    See [DargStack template: certificates](https://github.com/dargstack/dargstack_template/#certificates).
     
 
 ## volumes
