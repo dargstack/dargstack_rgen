@@ -1,3 +1,10 @@
+# [0.9.0](https://github.com/dargstack/dargstack_rgen/compare/0.8.9...0.9.0) (2023-03-27)
+
+
+### Features
+
+* migrate to new organization name ([78f5f61](https://github.com/dargstack/dargstack_rgen/commit/78f5f61703f244c2c15d13f448f8a970323e5cd0))
+
 ## [0.8.9](https://github.com/dargmuesli/dargstack_rgen/compare/0.8.8...0.8.9) (2023-03-21)
 
 
