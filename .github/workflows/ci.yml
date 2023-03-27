@@ -12,8 +12,6 @@ jobs:
     uses: dargmuesli/github-actions/.github/workflows/docker-ghcr.yml@0.35.3
     permissions:
       packages: write
-    with:
-      ARTIFACT_PATH: .output/public
   release-semantic:
     needs: build
     name: Release (semantic)
