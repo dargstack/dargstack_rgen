@@ -16,7 +16,7 @@
   "packageManager": "pnpm@8.3.1",
   "scripts": {
     "lint": "eslint --ext .js,.cjs .",
-    "prepare": "husky install",
+    "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\"",
     "test": "node src/generator.cjs -p test/example_stack -v"
   },
   "dependencies": {
