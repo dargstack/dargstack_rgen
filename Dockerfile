@@ -13,7 +13,7 @@ WORKDIR /srv/app/
 
 COPY ./pnpm-lock.yaml ./
 
-RUN npm install -g pnpm && \
+RUN corepack enable && \
     pnpm fetch
 
 COPY ./ ./
@@ -29,7 +29,7 @@ COPY --from=prepare /srv/app/ ./
 
 ENV NODE_ENV=production
 
-RUN npm install -g pnpm && \
+RUN corepack enable && \
     pnpm install --offline
 
 
@@ -39,7 +39,7 @@ WORKDIR /srv/app/
 
 COPY --from=prepare /srv/app/ ./
 
-RUN npm install -g pnpm && \
+RUN corepack enable && \
     pnpm run test
 
 
