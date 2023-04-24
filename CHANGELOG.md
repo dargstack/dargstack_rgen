@@ -1,3 +1,10 @@
+## [0.9.3](https://github.com/dargstack/dargstack_rgen/compare/0.9.2...0.9.3) (2023-04-24)
+
+
+### Bug Fixes
+
+* **package:** correct prepare script ([36c08ee](https://github.com/dargstack/dargstack_rgen/commit/36c08ee2c2ffc691415214ee4bd20ad025fe6969))
+
 ## [0.9.2](https://github.com/dargstack/dargstack_rgen/compare/0.9.1...0.9.2) (2023-04-18)
 
 
