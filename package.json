@@ -13,7 +13,7 @@
   "engines": {
     "node": "20"
   },
-  "packageManager": "pnpm@8.6.10",
+  "packageManager": "pnpm@8.6.11",
   "scripts": {
     "lint": "eslint --ext .js,.cjs .",
     "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\"",
