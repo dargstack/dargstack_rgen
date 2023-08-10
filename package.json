@@ -4,7 +4,7 @@
   "description": "Generates a DargStack stack project readme.",
   "main": "src/generator.cjs",
   "repository": "https://github.com/dargstack/dargstack_rgen.git",
-  "author": "Jonas Thelemann <e-mail@jonas-thelemann.de>",
+  "author": "Jonas Thelemann <e-mail+dargstack/dargstack_rgen@jonas-thelemann.de>",
   "license": "GPL-3.0-only",
   "bin": {
     "dargstack_rgen": "./src/generator.cjs"
