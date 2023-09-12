@@ -1,4 +1,4 @@
-FROM node:20.6.0-alpine@sha256:c843f4a4060246a25f62c80b3d4cf4a6b4c4639cdce421e4f2ee3102257225b4 AS development
+FROM node:20.6.1-alpine@sha256:d75175d449921d06250afd87d51f39a74fc174789fa3c50eba0d3b18369cc749 AS development
 
 WORKDIR /srv/app/
 
@@ -7,7 +7,7 @@ VOLUME /srv/app
 ENTRYPOINT ["node", "./src/generator.cjs"]
 
 
-FROM node:20.6.0-alpine@sha256:c843f4a4060246a25f62c80b3d4cf4a6b4c4639cdce421e4f2ee3102257225b4 AS prepare
+FROM node:20.6.1-alpine@sha256:d75175d449921d06250afd87d51f39a74fc174789fa3c50eba0d3b18369cc749 AS prepare
 
 WORKDIR /srv/app/
 
@@ -21,7 +21,7 @@ COPY ./ ./
 RUN pnpm install --offline
 
 
-FROM node:20.6.0-alpine@sha256:c843f4a4060246a25f62c80b3d4cf4a6b4c4639cdce421e4f2ee3102257225b4 AS build
+FROM node:20.6.1-alpine@sha256:d75175d449921d06250afd87d51f39a74fc174789fa3c50eba0d3b18369cc749 AS build
 
 WORKDIR /srv/app/
 
@@ -33,7 +33,7 @@ RUN corepack enable && \
     pnpm install --offline
 
 
-FROM node:20.6.0-alpine@sha256:c843f4a4060246a25f62c80b3d4cf4a6b4c4639cdce421e4f2ee3102257225b4 AS test
+FROM node:20.6.1-alpine@sha256:d75175d449921d06250afd87d51f39a74fc174789fa3c50eba0d3b18369cc749 AS test
 
 WORKDIR /srv/app/
 
@@ -43,7 +43,7 @@ RUN corepack enable && \
     pnpm run test
 
 
-FROM node:20.6.0-alpine@sha256:c843f4a4060246a25f62c80b3d4cf4a6b4c4639cdce421e4f2ee3102257225b4 AS collect
+FROM node:20.6.1-alpine@sha256:d75175d449921d06250afd87d51f39a74fc174789fa3c50eba0d3b18369cc749 AS collect
 
 WORKDIR /srv/app/
 
@@ -51,7 +51,7 @@ COPY --from=build /srv/app/ /srv/app/
 COPY --from=test /srv/app/package.json /tmp/package.json
 
 
-FROM node:20.6.0-alpine@sha256:c843f4a4060246a25f62c80b3d4cf4a6b4c4639cdce421e4f2ee3102257225b4 AS production
+FROM node:20.6.1-alpine@sha256:d75175d449921d06250afd87d51f39a74fc174789fa3c50eba0d3b18369cc749 AS production
 
 WORKDIR /srv/app/
 
