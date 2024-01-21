@@ -31,7 +31,7 @@ services:
   # | Database | [postgres_db]       |
   #
   # Values in square brackets are [Docker secrets](https://docs.docker.com/engine/swarm/secrets/).
-    image: adminer:4.8.1-standalone@sha256:b9125cae28bf249d1d2e9c4ffa42143a39ce1edc0eccbaf83e48ad6fbb3171b6
+    image: adminer:4.8.1-standalone@sha256:16d5b637e94d2e3206c531d0dc22207467dc1160c071d4d75c64b7ccee08f360
     volumes:
     - ../production/configurations/adminer/adminer.css:/var/www/html/adminer.css:ro
   postgres:
