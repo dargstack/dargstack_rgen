@@ -30,7 +30,7 @@ COPY --from=prepare /srv/app/ ./
 ENV NODE_ENV=production
 
 RUN corepack enable && \
-    pnpm install --offline
+    pnpm install --offline --ignore-scripts
 
 
 FROM node:20.11.0-alpine@sha256:8e6a472eb9742f4f486ca9ef13321b7fc2e54f2f60814f339eeda2aff3037573 AS test
