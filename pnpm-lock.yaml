@@ -9,8 +9,8 @@ dependencies:
     specifier: 4.3.1
     version: 4.3.1
   diff:
-    specifier: 5.1.0
-    version: 5.1.0
+    specifier: 5.2.0
+    version: 5.2.0
   json2md:
     specifier: 2.0.1
     version: 2.0.1
@@ -599,8 +599,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /diff@5.1.0:
-    resolution: {integrity: sha512-D+mk+qE8VC/PAUrlAU34N+VfXev0ghe5ywmpqrawphmVZc1bEfn56uo9qpyGp1p4xpzOHkSW4ztBd6L7Xx4ACw==}
+  /diff@5.2.0:
+    resolution: {integrity: sha512-uIFDxqpRZGZ6ThOk84hEfqWoHx2devRFvpTZcTHur85vImfaxUbTW9Ryh4CpCuDnToOP1CEtXKIgytHBPVff5A==}
     engines: {node: '>=0.3.1'}
     dev: false
 
