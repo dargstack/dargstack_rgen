@@ -27,7 +27,7 @@
   "license": "GPL-3.0-only",
   "main": "src/generator.cjs",
   "name": "dargstack_rgen",
-  "packageManager": "pnpm@8.15.4",
+  "packageManager": "pnpm@8.15.5",
   "repository": "https://github.com/dargstack/dargstack_rgen.git",
   "scripts": {
     "lint": "eslint --ext .js,.cjs .",
