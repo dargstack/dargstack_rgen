@@ -1,17 +1,15 @@
-#!/usr/bin/env node
+import fs from 'node:fs'
+import path from 'node:path'
 
-const fs = require('fs')
-const path = require('path')
-
-const deepMerge = require('deepmerge')
-const diff = require('diff')
-const json2md = require('json2md')
-const yaml = require('yaml')
-const yargs = require('yargs')
+import deepMerge from 'deepmerge'
+import diff from 'diff'
+import json2md from 'json2md'
+import yaml from 'yaml'
+import yargs from 'yargs'
 
 const DEVELOPMENT_ONLY_REGEX = /^\s*DARGSTACK-REMOVE\s*$/
 
-json2md.converters.vanilla = function (input, json2md) {
+json2md.converters.vanilla = function (input, _json2md) {
   return input
 }
 
@@ -36,13 +34,13 @@ const stackDevelopmentPath = path.join(
   projectPath,
   'src',
   'development',
-  'stack.yml'
+  'stack.yml',
 )
 const stackProductionPath = path.join(
   projectPath,
   'src',
   'production',
-  'production.yml'
+  'production.yml',
 )
 
 // Read YAMLs.
@@ -52,31 +50,28 @@ let productionYaml
 
 if (fs.existsSync(stackDevelopmentPath)) {
   developmentYaml = yaml.parseDocument(
-    fs.readFileSync(stackDevelopmentPath, 'utf8')
+    fs.readFileSync(stackDevelopmentPath, 'utf8'),
   )
 } else {
-  console.error('Development stack file not found!')
-  process.exit(1)
+  throw new Error('Development stack file not found!')
 }
 
 if (fs.existsSync(stackProductionPath)) {
   productionYaml = yaml.parseDocument(
-    fs.readFileSync(stackProductionPath, 'utf8')
+    fs.readFileSync(stackProductionPath, 'utf8'),
   )
 } else {
   console.info('Production stack file not found!')
 }
 
 if (developmentYaml.commentBefore === null) {
-  console.error('YAML is missing metadata!')
-  process.exit(1)
+  throw new Error('YAML is missing metadata!')
 }
 
 const metadata = developmentYaml.commentBefore.split('\n')
 
 if (metadata.length !== 4) {
-  console.error('YAML metadata is missing keys!')
-  process.exit(1)
+  throw new Error('YAML metadata is missing keys!')
 }
 
 const webName = metadata[0].trim()
@@ -110,7 +105,7 @@ for (let i = 0; i < documentItems.length; i++) {
     if (elementItem.value.commentBefore === undefined) {
       if (!process.argv.includes('--no-comments')) {
         console.error(
-          `${documentItem.key.value}: ${elementItem.key.value} is missing a comment!`
+          `${documentItem.key.value}: ${elementItem.key.value} is missing a comment!`,
         )
         commentMissing = true
       }
@@ -158,7 +153,7 @@ for (let i = 0; i < documentItems.length; i++) {
         !(elementItem.key.value in content[documentItem.key.value])
       ) {
         console.error(
-          `${documentItem.key.value}: ${elementItem.key.value} is missing a comment!`
+          `${documentItem.key.value}: ${elementItem.key.value} is missing a comment!`,
         )
         commentMissing = true
       }
@@ -178,12 +173,12 @@ for (let i = 0; i < documentItems.length; i++) {
 
   content[documentItem.key.value] = deepMerge(
     content[documentItem.key.value],
-    contentElementItems
+    contentElementItems,
   )
 }
 
 if (commentMissing) {
-  process.exit(1)
+  throw new Error('Comment is missing!')
 }
 
 const mdjson = [
@@ -254,8 +249,7 @@ if (validate) {
   if (fs.existsSync(readmePath)) {
     readme = fs.readFileSync(readmePath, 'utf8')
   } else {
-    console.error('README.md file not found!')
-    process.exit(1)
+    throw new Error('README.md file not found!')
   }
 
   const difference = diff.diffLines(md + '\n', readme)
@@ -263,7 +257,7 @@ if (validate) {
   if (difference.length > 1) {
     console.error(
       'The README is not up-2-date!\n' +
-        "Remember that newline diffs aren't visibly highlighted."
+        "Remember that newline diffs aren't visibly highlighted.",
     )
 
     difference.forEach((part) => {
@@ -285,7 +279,7 @@ if (validate) {
       }
     })
 
-    process.exit(difference.length)
+    throw new Error(difference.length)
   }
 } else {
   console.log(md)
