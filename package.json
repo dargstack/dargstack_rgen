@@ -35,5 +35,5 @@
     "test": "node src/generator.cjs -p test/example_stack -v"
   },
   "type": "module",
-  "version": "0.9.30"
+  "version": "0.9.31"
 }
