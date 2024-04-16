@@ -2,10 +2,11 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 import deepMerge from 'deepmerge'
-import diff from 'diff'
+import { diffLines } from 'diff'
 import json2md from 'json2md'
 import yaml from 'yaml'
 import yargs from 'yargs'
+import { hideBin } from 'yargs/helpers'
 
 const DEVELOPMENT_ONLY_REGEX = /^\s*DARGSTACK-REMOVE\s*$/
 
@@ -13,7 +14,7 @@ json2md.converters.vanilla = function (input, _json2md) {
   return input
 }
 
-const argv = yargs
+const argv = yargs(hideBin(process.argv))
   .option('path', {
     alias: 'p',
     description: 'Path to a DargStack stack project',
@@ -25,7 +26,8 @@ const argv = yargs
     type: 'boolean',
   })
   .help()
-  .alias('help', 'h').argv
+  .alias('help', 'h')
+  .parse()
 
 const projectPath = argv.path || process.cwd()
 const validate = argv.validate || false
@@ -252,7 +254,7 @@ if (validate) {
     throw new Error('README.md file not found!')
   }
 
-  const difference = diff.diffLines(md + '\n', readme)
+  const difference = diffLines(md + '\n', readme)
 
   if (difference.length > 1) {
     console.error(
