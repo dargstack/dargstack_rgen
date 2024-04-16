@@ -1,12 +1,12 @@
 import eslint from '@eslint/js'
 import globals from 'globals'
-import prettier from 'eslint-plugin-prettier/recommended'
+import prettierRecommended from 'eslint-plugin-prettier/recommended'
 import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
-  prettier, // must be last
+  prettierRecommended, // must be last
   {
     rules: {
       '@typescript-eslint/no-unused-vars': [
