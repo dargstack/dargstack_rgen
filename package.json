@@ -39,5 +39,5 @@
     "test": "node src/generator.js -p test/example_stack -v"
   },
   "type": "module",
-  "version": "0.9.32"
+  "version": "0.9.33"
 }
