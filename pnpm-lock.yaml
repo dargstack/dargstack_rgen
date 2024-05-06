@@ -31,8 +31,8 @@ importers:
         specifier: 19.2.2
         version: 19.2.2
       '@types/diff':
-        specifier: 5.2.0
-        version: 5.2.0
+        specifier: 5.2.1
+        version: 5.2.1
       '@types/json2md':
         specifier: 1.5.4
         version: 1.5.4
@@ -196,8 +196,8 @@ packages:
   '@types/conventional-commits-parser@5.0.0':
     resolution: {integrity: sha512-loB369iXNmAZglwWATL+WRe+CRMmmBPtpolYzIebFaX4YA3x+BEfLqhUAV9WanycKI3TG1IMr5bMJDajDKLlUQ==}
 
-  '@types/diff@5.2.0':
-    resolution: {integrity: sha512-pjJH+02ukgJRW0mViDUA1cdC+wzSgRu0e4cPuogPLAw0i66y62iMP0ZlXoJAmoXrKRZnF3pMDwyKZsgNVlMX4A==}
+  '@types/diff@5.2.1':
+    resolution: {integrity: sha512-uxpcuwWJGhe2AR1g8hD9F5OYGCqjqWnBUQFD8gMZsDbv8oPHzxJF6iMO6n8Tk0AdzlxoaaoQhOYlIg/PukVU8g==}
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
@@ -1228,7 +1228,7 @@ snapshots:
     dependencies:
       '@types/node': 20.12.8
 
-  '@types/diff@5.2.0': {}
+  '@types/diff@5.2.1': {}
 
   '@types/json-schema@7.0.15': {}
 
