@@ -23,7 +23,7 @@
     "globals": "15.4.0",
     "husky": "9.0.11",
     "prettier": "3.3.1",
-    "typescript-eslint": "7.12.0"
+    "typescript-eslint": "7.13.0"
   },
   "engines": {
     "node": "20"
@@ -31,7 +31,7 @@
   "license": "GPL-3.0-only",
   "main": "src/generator.js",
   "name": "dargstack_rgen",
-  "packageManager": "pnpm@9.2.0",
+  "packageManager": "pnpm@9.3.0",
   "repository": "https://github.com/dargstack/dargstack_rgen.git",
   "scripts": {
     "lint": "eslint --cache",
