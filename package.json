@@ -14,7 +14,7 @@
   "devDependencies": {
     "@commitlint/cli": "19.4.1",
     "@commitlint/config-conventional": "19.4.1",
-    "@types/diff": "5.2.1",
+    "@types/diff": "5.2.2",
     "@types/json2md": "1.5.4",
     "@types/yargs": "17.0.33",
     "eslint": "9.9.1",
