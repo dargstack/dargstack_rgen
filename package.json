@@ -14,7 +14,7 @@
   "devDependencies": {
     "@commitlint/cli": "19.5.0",
     "@commitlint/config-conventional": "19.5.0",
-    "@types/diff": "5.2.2",
+    "@types/diff": "5.2.3",
     "@types/json2md": "1.5.4",
     "@types/yargs": "17.0.33",
     "eslint": "9.12.0",
@@ -23,7 +23,7 @@
     "globals": "15.10.0",
     "husky": "9.1.6",
     "prettier": "3.3.3",
-    "typescript-eslint": "8.8.0"
+    "typescript-eslint": "8.8.1"
   },
   "engines": {
     "node": "20"
@@ -31,7 +31,7 @@
   "license": "GPL-3.0-only",
   "main": "src/generator.js",
   "name": "dargstack_rgen",
-  "packageManager": "pnpm@9.12.0",
+  "packageManager": "pnpm@9.12.1",
   "repository": "https://github.com/dargstack/dargstack_rgen.git",
   "scripts": {
     "lint": "eslint --cache",
