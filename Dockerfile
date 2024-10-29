@@ -1,4 +1,4 @@
-FROM node:20.18.0-alpine@sha256:c13b26e7e602ef2f1074aef304ce6e9b7dd284c419b35d89fcf3cc8e44a8def9 AS development
+FROM node:22.10.0-alpine@sha256:fc95a044b87e95507c60c1f8c829e5d98ddf46401034932499db370c494ef0ff AS development
 
 WORKDIR /srv/app/
 
@@ -7,7 +7,7 @@ VOLUME /srv/app
 ENTRYPOINT ["node", "./src/generator.js"]
 
 
-FROM node:20.18.0-alpine@sha256:c13b26e7e602ef2f1074aef304ce6e9b7dd284c419b35d89fcf3cc8e44a8def9 AS prepare
+FROM node:22.10.0-alpine@sha256:fc95a044b87e95507c60c1f8c829e5d98ddf46401034932499db370c494ef0ff AS prepare
 
 WORKDIR /srv/app/
 
@@ -41,7 +41,7 @@ COPY --from=build /srv/app/ /srv/app/
 COPY --from=test /srv/app/package.json /tmp/package.json
 
 
-FROM node:20.18.0-alpine@sha256:c13b26e7e602ef2f1074aef304ce6e9b7dd284c419b35d89fcf3cc8e44a8def9 AS production
+FROM node:22.10.0-alpine@sha256:fc95a044b87e95507c60c1f8c829e5d98ddf46401034932499db370c494ef0ff AS production
 
 WORKDIR /srv/app/
 
