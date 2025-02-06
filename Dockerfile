@@ -11,10 +11,12 @@ FROM node:22.13.1-alpine@sha256:e2b39f7b64281324929257d0f8004fb6cb4bf0fdfb9aa8ce
 
 WORKDIR /srv/app/
 
-COPY ./pnpm-lock.yaml ./
+COPY ./pnpm-lock.yaml package.json ./
 
-RUN corepack enable && \
-    pnpm fetch
+RUN npm install -g corepack@latest \
+    # TODO: remove (https://github.com/nodejs/corepack/issues/612)
+    && corepack enable \
+    && pnpm fetch
 
 COPY ./ ./
 
@@ -25,14 +27,18 @@ FROM prepare AS build
 
 ENV NODE_ENV=production
 
-RUN corepack enable && \
-    pnpm install --offline --ignore-scripts
+RUN npm install -g corepack@latest \
+    # TODO: remove (https://github.com/nodejs/corepack/issues/612)
+    && corepack enable \
+    && pnpm install --offline --ignore-scripts --prod
 
 
 FROM prepare AS test
 
-RUN corepack enable && \
-    pnpm run test
+RUN npm install -g corepack@latest \
+    # TODO: remove (https://github.com/nodejs/corepack/issues/612)
+    && corepack enable \
+    && pnpm run test
 
 
 FROM prepare AS collect
