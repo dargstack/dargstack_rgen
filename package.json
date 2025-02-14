@@ -6,7 +6,7 @@
   "dependencies": {
     "deepmerge": "4.3.1",
     "diff": "7.0.0",
-    "json2md": "2.0.1",
+    "json2md": "2.0.2",
     "yaml": "2.7.0",
     "yargs": "17.7.2"
   },
@@ -22,7 +22,7 @@
     "eslint-plugin-prettier": "5.2.3",
     "globals": "15.15.0",
     "husky": "9.1.7",
-    "prettier": "3.5.0",
+    "prettier": "3.5.1",
     "typescript-eslint": "8.24.0"
   },
   "engines": {
@@ -31,7 +31,7 @@
   "license": "GPL-3.0-only",
   "main": "src/generator.js",
   "name": "dargstack_rgen",
-  "packageManager": "pnpm@10.3.0",
+  "packageManager": "pnpm@10.4.0",
   "repository": "https://github.com/dargstack/dargstack_rgen.git",
   "scripts": {
     "lint": "eslint --cache",
