@@ -13,9 +13,7 @@ WORKDIR /srv/app/
 
 COPY ./pnpm-lock.yaml package.json ./
 
-RUN npm install -g corepack@latest \
-    # TODO: remove (https://github.com/nodejs/corepack/issues/612)
-    && corepack enable \
+RUN corepack enable \
     && pnpm fetch
 
 COPY ./ ./
@@ -27,17 +25,13 @@ FROM prepare AS build
 
 ENV NODE_ENV=production
 
-RUN npm install -g corepack@latest \
-    # TODO: remove (https://github.com/nodejs/corepack/issues/612)
-    && corepack enable \
+RUN corepack enable \
     && pnpm install --offline --ignore-scripts --prod
 
 
 FROM prepare AS test
 
-RUN npm install -g corepack@latest \
-    # TODO: remove (https://github.com/nodejs/corepack/issues/612)
-    && corepack enable \
+RUN corepack enable \
     && pnpm run test
 
 
