@@ -30,9 +30,6 @@ importers:
       '@commitlint/config-conventional':
         specifier: 19.8.1
         version: 19.8.1
-      '@types/diff':
-        specifier: 7.0.2
-        version: 7.0.2
       '@types/json2md':
         specifier: 1.5.4
         version: 1.5.4
@@ -220,9 +217,6 @@ packages:
 
   '@types/conventional-commits-parser@5.0.1':
     resolution: {integrity: sha512-7uz5EHdzz2TqoMfV7ee61Egf5y6NkcO4FB/1iCCQnbeiI1F3xzv3vK5dBCXUCLQgGYS+mUeigK1iKQzvED+QnQ==}
-
-  '@types/diff@7.0.2':
-    resolution: {integrity: sha512-JSWRMozjFKsGlEjiiKajUjIJVKuKdE3oVy2DNtK+fUo8q82nhFZ2CPQwicAIkXrofahDXrWJ7mjelvZphMS98Q==}
 
   '@types/estree@1.0.7':
     resolution: {integrity: sha512-w28IoSUCJpidD/TGviZwwMJckNESJZXFu7NBZ5YJ4mEUnNraUn9Pm8HSZm/jDF1pDWYKspWE7oVphigUPRakIQ==}
@@ -1454,8 +1448,6 @@ snapshots:
   '@types/conventional-commits-parser@5.0.1':
     dependencies:
       '@types/node': 22.15.17
-
-  '@types/diff@7.0.2': {}
 
   '@types/estree@1.0.7': {}
 
