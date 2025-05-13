@@ -5,7 +5,7 @@
   },
   "dependencies": {
     "deepmerge": "4.3.1",
-    "diff": "8.0.0",
+    "diff": "8.0.1",
     "json2md": "2.0.3",
     "yaml": "2.7.1",
     "yargs": "17.7.2"
@@ -30,7 +30,7 @@
   "license": "GPL-3.0-only",
   "main": "src/generator.js",
   "name": "dargstack_rgen",
-  "packageManager": "pnpm@10.10.0",
+  "packageManager": "pnpm@10.11.0",
   "repository": "https://github.com/dargstack/dargstack_rgen.git",
   "scripts": {
     "lint": "eslint --cache",
