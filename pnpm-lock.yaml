@@ -12,8 +12,8 @@ importers:
         specifier: 4.3.1
         version: 4.3.1
       diff:
-        specifier: 8.0.1
-        version: 8.0.1
+        specifier: 8.0.2
+        version: 8.0.2
       json2md:
         specifier: 2.0.3
         version: 2.0.3
@@ -409,8 +409,8 @@ packages:
     resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
     engines: {node: '>=0.10.0'}
 
-  diff@8.0.1:
-    resolution: {integrity: sha512-rEaM3KmVm78zE3dFZaop3aCQa2MTm+T4kcigUFLVU/KbOYdiY6JnL2g2puOYnct3QFw9pjZadaCbCZ1O8ArMlQ==}
+  diff@8.0.2:
+    resolution: {integrity: sha512-sSuxWU5j5SR9QQji/o2qMvqRNYRDOcBTgsJ/DeCf4iSN4gW+gNMXM7wFIP+fdXZxoNiAnHUTGjCr+TSWXdRDKg==}
     engines: {node: '>=0.3.1'}
 
   dot-prop@5.3.0:
@@ -1369,7 +1369,7 @@ snapshots:
 
   deepmerge@4.3.1: {}
 
-  diff@8.0.1: {}
+  diff@8.0.2: {}
 
   dot-prop@5.3.0:
     dependencies:
