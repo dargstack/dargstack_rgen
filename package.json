@@ -8,7 +8,7 @@
     "diff": "8.0.2",
     "json2md": "2.0.3",
     "yaml": "2.8.0",
-    "yargs": "17.7.2"
+    "yargs": "18.0.0"
   },
   "description": "Generates a DargStack stack project readme.",
   "devDependencies": {
