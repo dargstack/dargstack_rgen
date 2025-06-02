@@ -1,20 +1,24 @@
-FROM node:22.16.0-alpine@sha256:41e4389f3d988d2ed55392df4db1420ad048ae53324a8e2b7c6d19508288107e AS development
+FROM node:22.16.0-alpine AS base-image
+
+ENV CI=true
 
 WORKDIR /srv/app/
+
+RUN corepack enable
+
+
+FROM base-image AS development
 
 VOLUME /srv/app
 
 ENTRYPOINT ["node", "./src/generator.js"]
 
 
-FROM node:22.16.0-alpine@sha256:41e4389f3d988d2ed55392df4db1420ad048ae53324a8e2b7c6d19508288107e AS prepare
-
-WORKDIR /srv/app/
+FROM base-image AS prepare
 
 COPY ./pnpm-lock.yaml package.json ./
 
-RUN corepack enable \
-    && pnpm fetch
+RUN pnpm fetch
 
 COPY ./ ./
 
@@ -25,26 +29,26 @@ FROM prepare AS build
 
 ENV NODE_ENV=production
 
-RUN corepack enable \
-    && pnpm install --offline --ignore-scripts --prod
+RUN pnpm install --offline --ignore-scripts --prod
+
+
+FROM prepare AS lint
+
+RUN pnpm run lint
 
 
 FROM prepare AS test
 
-RUN corepack enable \
-    && pnpm run test
+RUN pnpm run test
 
 
 FROM prepare AS collect
 
 COPY --from=build /srv/app/ /srv/app/
-COPY --from=test /srv/app/package.json /tmp/package.json
+COPY --from=lint /srv/app/package.json /dev/null
+COPY --from=test /srv/app/package.json /dev/null
 
 
-FROM node:22.16.0-alpine@sha256:41e4389f3d988d2ed55392df4db1420ad048ae53324a8e2b7c6d19508288107e AS production
-
-WORKDIR /srv/app/
-
-COPY --from=collect /srv/app/ ./
+FROM collect AS production
 
 ENTRYPOINT ["node", "./src/generator.js"]
