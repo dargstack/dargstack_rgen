@@ -1,3 +1,10 @@
+## [0.9.73](https://github.com/dargstack/dargstack_rgen/compare/0.9.72...0.9.73) (2025-10-07)
+
+
+### Bug Fixes
+
+* schedule release ([411169b](https://github.com/dargstack/dargstack_rgen/commit/411169b13e9ab32894eb804326302b46e69d5b52))
+
 ## [0.9.72](https://github.com/dargstack/dargstack_rgen/compare/0.9.71...0.9.72) (2025-09-23)
 
 
