@@ -54,7 +54,7 @@ This project is deployed in accordance to the [DargStack template](https://githu
 
  - ### `adminer`
     
-    You can access the database's frontend at [adminer.localhost](https://adminer.localhost/).
+    You can access the database's frontend at [adminer.app.localhost](https://adminer.app.localhost/).
     This information is required for login:
     
     |          |                     |

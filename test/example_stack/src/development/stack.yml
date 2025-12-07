@@ -19,7 +19,7 @@ secrets:
     file: ./secrets/postgres/user.secret
 services:
   adminer:
-  # You can access the database's frontend at [adminer.localhost](https://adminer.localhost/).
+  # You can access the database's frontend at [adminer.app.localhost](https://adminer.app.localhost/).
   # This information is required for login:
   #
   # |          |                     |
