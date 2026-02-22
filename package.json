@@ -12,8 +12,8 @@
   },
   "description": "Generates a DargStack stack project readme.",
   "devDependencies": {
-    "@commitlint/cli": "20.4.1",
-    "@commitlint/config-conventional": "20.4.1",
+    "@commitlint/cli": "20.4.2",
+    "@commitlint/config-conventional": "20.4.2",
     "@eslint/js": "10.0.1",
     "@types/json2md": "1.5.4",
     "@types/yargs": "17.0.35",
