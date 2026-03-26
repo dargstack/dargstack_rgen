@@ -1,4 +1,4 @@
-FROM node:24.14.0-alpine AS base-image
+FROM node:24.14.1-alpine AS base-image
 
 ENV CI=true
 
