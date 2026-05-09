@@ -25,13 +25,18 @@
     "prettier": "3.8.3",
     "typescript-eslint": "8.59.2"
   },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.0.8"
+    }
+  },
   "engines": {
     "node": "24"
   },
   "license": "GPL-3.0-only",
   "main": "src/generator.js",
   "name": "dargstack_rgen",
-  "packageManager": "pnpm@11.0.6",
   "repository": "https://github.com/dargstack/dargstack_rgen.git",
   "scripts": {
     "lint": "eslint --cache",
