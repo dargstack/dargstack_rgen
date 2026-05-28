@@ -1,3 +1,10 @@
+## [0.9.92](https://github.com/dargstack/dargstack_rgen/compare/0.9.91...0.9.92) (2026-05-28)
+
+
+### Bug Fixes
+
+* **deps:** update dargmuesli/github-actions to v5.4.0 ([730524e](https://github.com/dargstack/dargstack_rgen/commit/730524e49064bfc9bed109cd1fb42217b8e57619))
+
 ## [0.9.91](https://github.com/dargstack/dargstack_rgen/compare/0.9.90...0.9.91) (2026-05-24)
 
 
